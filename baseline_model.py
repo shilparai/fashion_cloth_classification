@@ -14,6 +14,8 @@ import pydot
 from IPython.display import SVG
 from keras.utils.vis_utils import model_to_dot
 from keras.utils import plot_model
+from keras.layers import Dropout
+
 #from kt_utils import *
 
 import keras.backend as K
@@ -63,8 +65,7 @@ print ("Y_train shape: " + str(train_labels.shape))
 print ("X_test shape: " + str(eval_data.shape))
 print ("Y_test shape: " + str(eval_labels.shape))
 
-
-from keras.layers import Dropout
+# model architect
 
 model = Sequential()
 model.add(Conv2D(40, kernel_size=5, padding="same",input_shape=(28, 28, 1), activation = 'relu'))
